@@ -4,12 +4,9 @@ function theme_scripts(){
     //theme styles
     wp_enqueue_style( 'theme', get_stylesheet_uri() );
     //theme Javascript
-    wp_enqueue_script( 'theme', get_stylesheet_directory_uri() . 'assets/js/theme.js', array('jquery'), '1.0.0' );
-
-    //transition-scripts
-    wp_enqueue_style( 'transition', get_stylesheet_directory_uri() . 'assets/vendor/transition-effects/css/style.css' );
-    wp_enqueue_script( 'transition', get_stylesheet_directory_uri() . 'assets/vendor/transition-effects/js/main.js', array('jquery'), '1.0.0' );
-    wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri() . 'assets/vendor/transition-effects/js/modernizr.js', array('jquery'), '1.0.0' );
+    wp_enqueue_script( 'theme', get_stylesheet_directory_uri() . '/assets/js/theme.js', array('jquery'), '1.0.0' );
+    //google font
+    wp_enqueue_style( 'font', 'https://fonts.googleapis.com/css?family=Lato' );
 }
 add_action( 'wp_enqueue_scripts', 'theme_scripts' );
 
@@ -98,3 +95,10 @@ function theme_widgets(){
     );
 }
 add_action( 'widgets_init', 'theme_widgets' );
+
+function custom_the_excerpt($post){
+    $link = '<a class="read-more" href="'.the_permalink($post->ID).'">Read More</a>';
+    $excerpt = wp_trim_words( get_the_content($post->ID), 20 , $link );
+    return  $excerpt;
+}
+add_filter( 'the_excerpt', 'custom_the_excerpt' );

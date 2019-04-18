@@ -17,6 +17,13 @@
                 ?>
                 </main>
             </div>
+            <div id="secondary" class="sidebar">
+            <?php   if(is_active_sidebar('sidebar')): ?>
+            <div class="widget-area">
+            <?php   dynamic_sidebar('sidebar'); ?>
+            </div>
+            <?php   endif;  ?>
+            </div>
         </div>
     </div>
 </div>

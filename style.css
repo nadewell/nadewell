@@ -7,7 +7,9 @@ Description: Special Custom Theme for nadewell blog
 Keywords: Nadewell, Blog
 Version: 1.0.0
 */
+
 *{
+    font-family: 'Lato', sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -25,6 +27,7 @@ p{
     margin: 0 0 2em 0;
     font-size: 14px;
     font-weight: 400;
+    line-height: 1.7em;
     color: #333;
 }
 blockquote{
@@ -46,6 +49,9 @@ ul li{
     font-weight: 400;
     color: #333;
     margin-bottom: 1em;
+}
+ul li:last-child{
+    margin-bottom: 0;
 }
 input[type="text"],
 input[type="email"],
@@ -119,11 +125,7 @@ article.post .screen-reader-text {
     display: block;
     clear: both;
 }
-.blog .site-main,
-.archive .site-main,
-.search .site-main,
 .single .site-main{
-    padding-top: 3em;
     padding-bottom: 3em;
 }
 .body .site-main
@@ -133,7 +135,7 @@ article.post .screen-reader-text {
     clear: both;
 }
 /*******
-* Header
+*   Header
 */
 .hamburger {
     display: none;
@@ -227,7 +229,7 @@ article.post .screen-reader-text {
     transition: width 0.3s ease-out;
 }
 /*************
-* Footer
+*   Footer
 */
 .site-footer {
     background: #333;
@@ -241,12 +243,8 @@ article.post .screen-reader-text {
     float: left;
     width: 50%;
 }
-.site-footer .widget-area ul li,
-.site-footer .widget-area ul li a {
-    color: #fff;
-}
-.site-footer .widget-area ul li a:hover{
-    color: #f33;
+.site-footer .widget {
+    margin: 0 0 2em;
 }
 .site-footer .widget-title {
     font-size: 26px;
@@ -254,7 +252,66 @@ article.post .screen-reader-text {
     color: #fff;
     margin-bottom: 1.5em;
 }
-
+.site-footer .widget ul{
+    margin: 0;
+}
+.site-footer .widget ul li,
+.site-footer .widget ul li a {
+    color: #fff;
+}
+.site-footer .widget ul li a:hover{
+    color: #f33;
+}
+/*************
+*   Layout
+*/
+body.blog #primary.content-area,
+body.archive #primary.content-area,
+body.search #primary.content-area,
+body.single #primary.content-area {
+    float: left;
+    max-width: 75%;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+body.blog #primary.content-area::after,
+body.archive #primary.content-area::after,
+body.search #primary.content-area::afterm
+body.single #primary.content-area::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+body.blog #secondary.sidebar,
+body.archive #secondary.sidebar,
+body.search #secondary.sidebar,
+body.single #secondary.sidebar {
+    float: left;
+    max-width: 25%;
+    padding-right: 1em;
+    padding-left: 1em;
+    border-left: 2px solid #f33;
+}
+body.blog #secondary.sidebar::after,
+body.archive #secondary.sidebar::after,
+body.search #secondary.sidebar::after,
+body.single #secondary.sidebar::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.widget{
+    margin: 0 0 2em;
+}
+.widget-title {
+    font-size: 26px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+.widget ul{
+    margin: 0;
+}
 /**************
 *   Page Title
 */
@@ -266,19 +323,39 @@ article.post .screen-reader-text {
     min-height: 100px;
     background: #f33;
     color: #fff;
+    margin-bottom: 3em;
 }
-
-body.blog article, body.archive .post, body.search .post {
+.single .page-header.banner {
+    height: 250px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-bottom: 1em;
+}
+.page-header.banner > h2.page-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+}
+/***********************
+*   blog,archive,search 
+*/
+body.blog article.post, 
+body.archive article.post, 
+body.search article.post {
     float: left;
-    max-width: 50%;
+    max-width: 48%;
     padding-right: 2em;
     padding-left: 2em;
+    border: 2px solid #f33;
+    margin: 0px 0.5em 3em 0.5em;
 }
 .entry-header .entry-title > a {
     display: block;
     margin-bottom: 10px;
     font-size: 26px;
-    font-weight: 600;
+    font-weight: 500;
     color: #333;
 }
 .entry-header .entry-title > a:hover{
@@ -288,8 +365,22 @@ body.blog article, body.archive .post, body.search .post {
 .entry-header .entry-meta > span,
 .entry-header .entry-meta > .screen-reader-text{
     display: inline-block;
-    margin-bottom: 10px;
     font-size: 14px;
     font-weight: 400;
     color: #333;
 }
+article > .entry-header > .entry-title {
+    margin: 1em 0 0.5em 0;
+    text-transform: uppercase;
+}
+article > .entry-header > .entry-meta {
+    margin: 0 0 0.5em 0;
+}
+a.read-more {
+    margin-left: 10px;
+    text-transform: uppercase;
+    border-bottom: 1px solid;
+}
+/************
+*   Single 
+*/
