@@ -1,0 +1,295 @@
+/* 
+Theme Name: Nadewell
+Theme URI: https://www.nadewell.tk
+Author: Nadewell
+Author URI: https://www.nadewell.tk
+Description: Special Custom Theme for nadewell blog
+Keywords: Nadewell, Blog
+Version: 1.0.0
+*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}
+a:hover{
+    color: #f33;
+}
+p{
+    margin: 0 0 2em 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}
+blockquote{
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+ul{
+    list-style: none;
+    margin: 0 0 2em;
+}
+ul li{
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 1em;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="search"]{
+    width: 100%;
+    min-height: 30px;
+    border: 1px solid #333;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 20px;
+    padding: 0.36em;
+    text-transform: uppercase;
+}
+input[type="submit"],
+input[type="reset"],
+button[type="button"],
+button[type="submit"]{
+    width: 100%;
+    min-height: 30px;
+    border: 1px solid #333;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 20px;
+    padding: 0.36em;
+    text-transform: uppercase;
+}
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button[type="button"]:hover,
+button[type="submit"]:hover,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+button[type="button"]:focus,
+button[type="submit"]:focus{
+    background: #f33;
+    border: #f33;
+    color: #333;
+}
+textarea{
+    width: 100%;
+    min-height: 50px;
+    border: 1px solid #333;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 20px;
+    padding: 0.36em;
+    text-transform: uppercase;
+}
+.screen-reader-text {
+    display: none;
+}
+article.post .screen-reader-text {
+    display: block;
+}
+.wrap{
+    max-width: 73em;
+    margin-right: auto;
+    margin-left: auto;
+}
+.wrap::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.blog .site-main,
+.archive .site-main,
+.search .site-main,
+.single .site-main{
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+.body .site-main
+.site-main::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+/*******
+* Header
+*/
+.hamburger {
+    display: none;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+.hamburger > .bar {
+    width: 100%;
+    height: 2px;
+    background: #fff;
+}
+.hamburger > .bar:nth-child(1){
+    top: 8px
+}
+.hamburger > .bar:nth-child(2){
+    top: 50%;
+    transform: translateY(-50%);
+}
+.hamburger > .bar:nth-child(3){
+    bottom: 8px
+}
+.site-header {
+    width: 100%;
+    display: table;
+    padding: 1em 6.5em;
+    background: #fff;
+    box-shadow: 0px 0px 5px #ddd;
+}
+.site-branding {
+    display: table-cell;
+    max-width: 200px;
+}
+.site-navbar > .menu-primary-container {
+    display: inline-block;
+}
+.site-navbar {
+    display: table-cell;
+    background: #fff;
+    vertical-align: middle;
+    text-align: right;
+}
+.site-navbar #menu-primary {
+    list-style: none;
+    margin-bottom: 0;
+}
+.site-navbar #menu-primary li {
+    display: inline-block;
+    padding-right: 1em;
+    padding-left: 1em;
+    margin-bottom: 0;
+}
+.site-navbar #menu-primary li:first-child {
+    padding-right: 1em;
+    padding-left: 0em;
+}
+.site-navbar #menu-primary li:last-child {
+    padding-right: 0em;
+    padding-left: 1em;
+}
+.site-header a {
+    font-size: 18px;
+    font-weight: 400;
+    position: relative;
+}
+.site-header a:hover {
+    font-size: 18px;
+    font-weight: 400;
+}
+.site-header .current-menu-item > a::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background: #f33;
+    color: #f33;
+}
+.site-header a::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background: #f33;
+}
+.site-header a:hover::after{
+    width: 100%;
+    transition: width 0.3s ease-out;
+}
+/*************
+* Footer
+*/
+.site-footer {
+    background: #333;
+    padding: 3em 0 2em 0;
+}
+.site-footer input {
+    border-color: #fff;
+    color: #fff;
+}
+.site-footer .widget-area {
+    float: left;
+    width: 50%;
+}
+.site-footer .widget-area ul li,
+.site-footer .widget-area ul li a {
+    color: #fff;
+}
+.site-footer .widget-area ul li a:hover{
+    color: #f33;
+}
+.site-footer .widget-title {
+    font-size: 26px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 1.5em;
+}
+
+/**************
+*   Page Title
+*/
+.page-header.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100px;
+    background: #f33;
+    color: #fff;
+}
+
+body.blog article, body.archive .post, body.search .post {
+    float: left;
+    max-width: 50%;
+    padding-right: 2em;
+    padding-left: 2em;
+}
+.entry-header .entry-title > a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 26px;
+    font-weight: 600;
+    color: #333;
+}
+.entry-header .entry-title > a:hover{
+    color: #f33;
+}
+.entry-header .entry-meta > a,
+.entry-header .entry-meta > span,
+.entry-header .entry-meta > .screen-reader-text{
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}

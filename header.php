@@ -11,8 +11,15 @@
 
 <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
-
     <header id="masthead" class="site-header" role="headerss">
+        <div class="site-branding">
+            <?php if( has_custom_logo() ): ?>
+            <img src="<?php echo wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ) , 'full' )[0]; ?>" alt="<?php bloginfo( 'name' ); ?>">
+            <?php else: ?>
+            <div class="site-title"><?php bloginfo( 'name' ); ?></div>
+            <div class="site-tagline"><?php bloginfo( 'description' ); ?></div>
+            <?php endif; ?>
+        </div>
         <nav id="main-navigation" class="site-navbar">
             <?php wp_nav_menu(
                 array(
@@ -21,14 +28,10 @@
                 )
             ); ?>
         </nav>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </header>
-
-    <div class="site-content-contain">
-        <div id="content" class="site-content">
-            <div class="wrap">
-            <header class="page-header">
-                <h2 class="page-title"><?php the_title(); ?></h2>
-            </header>
-                <div id="primary" class="content-area">
-                    <main id="main" class="site-main" role="main">
                     

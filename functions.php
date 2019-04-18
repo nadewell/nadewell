@@ -1,7 +1,15 @@
 <?php
 
 function theme_scripts(){
-    
+    //theme styles
+    wp_enqueue_style( 'theme', get_stylesheet_uri() );
+    //theme Javascript
+    wp_enqueue_script( 'theme', get_stylesheet_directory_uri() . 'assets/js/theme.js', array('jquery'), '1.0.0' );
+
+    //transition-scripts
+    wp_enqueue_style( 'transition', get_stylesheet_directory_uri() . 'assets/vendor/transition-effects/css/style.css' );
+    wp_enqueue_script( 'transition', get_stylesheet_directory_uri() . 'assets/vendor/transition-effects/js/main.js', array('jquery'), '1.0.0' );
+    wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri() . 'assets/vendor/transition-effects/js/modernizr.js', array('jquery'), '1.0.0' );
 }
 add_action( 'wp_enqueue_scripts', 'theme_scripts' );
 
@@ -50,3 +58,43 @@ function theme_setup(){
 	) );
 }
 add_action( 'after_setup_theme', 'theme_setup' );
+
+function theme_widgets(){
+    register_sidebar(
+        array(
+            'name'          => __( 'Footer Widget Area-1', 'nadewell' ),
+            'id'            => 'footer-1',
+            'description'   => 'Footer Widget Area-1',
+            'class'         => 'widget-area',
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2 class="widget-title">',
+            'after_title'   => '</h2>'
+        )
+    );
+    register_sidebar(
+        array(
+            'name'          => __( 'Footer Widget Area-2', 'nadewell' ),
+            'id'            => 'footer-2',
+            'description'   => 'Footer Widget Area-2',
+            'class'         => '',
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2 class="widget-title">',
+            'after_title'   => '</h2>'
+        )
+    );
+    register_sidebar(
+        array(
+            'name'          => __( 'Sidebar Widget Area', 'nadewell' ),
+            'id'            => 'sidebar',
+            'description'   => 'Sidebar Widget Area',
+            'class'         => '',
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2 class="widget-title">',
+            'after_title'   => '</h2>'
+        )
+    );
+}
+add_action( 'widgets_init', 'theme_widgets' );
