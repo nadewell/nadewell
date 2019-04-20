@@ -8,10 +8,10 @@ $featured_image_src = $featured_image[0];
 ?>
 <div class="site-content-contain">
     <div id="content" class="site-content">
+        <header class="page-header banner" style="background-image:url(<?php echo $featured_image_src; ?>);">
+            <h1 class="page-title"><?php the_title(); ?></h1>
+        </header>
         <div class="wrap">
-            <header class="page-header banner" style="background-image:url(<?php echo $featured_image_src; ?>);">
-                <h1 class="page-title"><?php the_title(); ?></h1>
-            </header>
             <div id="primary" class="content-area">
                 <main id="main" class="site-main" role="main">
                 <?php

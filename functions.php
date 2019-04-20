@@ -52,7 +52,12 @@ function theme_setup(){
 	register_nav_menus( array(
 		'primary' => __( 'Primary Navigation', 'nadewell' ),
 		'404' => __( '404 Navigation', 'nadewell' ),
-	) );
+    ) );
+    
+    /*************
+     * Custom Logo  
+     */
+    add_theme_support( 'custom-logo' );
 }
 add_action( 'after_setup_theme', 'theme_setup' );
 
@@ -97,7 +102,7 @@ function theme_widgets(){
 add_action( 'widgets_init', 'theme_widgets' );
 
 function custom_the_excerpt($post){
-    $link = '<a class="read-more" href="'.the_permalink($post->ID).'">Read More</a>';
+    $link = '<a class="read-more" href="'.get_the_permalink($post->ID).'">Read More</a>';
     $excerpt = wp_trim_words( get_the_content($post->ID), 20 , $link );
     return  $excerpt;
 }
