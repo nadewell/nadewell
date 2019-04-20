@@ -157,7 +157,7 @@ button[type="button"]:focus,
 button[type="submit"]:focus{
     background: #f33;
     border: #f33;
-    color: #333;
+    color: #fff;
 }
 textarea{
     width: 100%;
