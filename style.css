@@ -510,7 +510,7 @@ a.read-more {
         top: 0;
         left: 0;
         z-index: 10;
-        background: #999;
+        background: #fff;
         overflow-x: auto;
         clip-path: circle(0);
         transition: all 0.3 ease-out;
