@@ -3,7 +3,7 @@
 <div class="site-content-contain">
     <div id="content" class="site-content">
         <header class="page-header banner">
-            <h2 class="page-title"><?php wp_title('', true, ''); ?></h2>
+            <h2 class="page-title"><?php echo get_query_var('pagename'); ?></h2>
         </header>
         <div class="wrap">
             <div id="primary" class="content-area">
