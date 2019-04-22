@@ -453,13 +453,12 @@ body.single #secondary.sidebar::after {
 */
 body.blog article.post, 
 body.archive article.post, 
-body.search article.post {
-    float: left;
-    max-width: 48%;
+.body.search article.post {
     padding-right: 2em;
     padding-left: 2em;
     border: 2px solid #f33;
     margin: 0px 0.5em 3em 0.5em;
+    vertical-align: top;
 }
 .entry-header .entry-title > a {
     display: block;
@@ -575,9 +574,6 @@ a.read-more {
     body.search #secondary.sidebar, 
     body.single #secondary.sidebar {
         max-width: 30%;
-    }
-    body.blog article.post, body.archive article.post, body.search article.post {
-        max-width: 100%;
     }
 }
 
