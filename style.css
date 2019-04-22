@@ -15,6 +15,16 @@ Version: 1.0.0
     padding: 0;
 }
 
+
+.row{
+    margin-right: -1.5em;
+    margin-left: -1.5em;
+}
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
 .col-sm-1,.col-sm-2,
 .col-sm-3,.col-sm-4,
 .col-sm-5,.col-sm-6,
@@ -33,10 +43,9 @@ Version: 1.0.0
 .col-lg-7,.col-lg-8,
 .col-lg-9,.col-lg-10,
 .col-lg-11,.col-lg-12{
-    display: inline-block;
-    padding-right: 15px;
-    padding-left: 15px;
-    vertical-align: top;
+    float: left;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
 }
  /* Grid for small size devices */
  .col-xs-1{
@@ -181,11 +190,8 @@ article.post .screen-reader-text {
     max-width: 73em;
     margin-right: auto;
     margin-left: auto;
-}
-.wrap::after{
-    content: "";
-    display: block;
-    clear: both;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
 }
 .single .site-main{
     padding-bottom: 3em;
