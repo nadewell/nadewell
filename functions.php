@@ -7,6 +7,10 @@ function theme_scripts(){
     wp_enqueue_script( 'theme', get_stylesheet_directory_uri() . '/assets/js/theme.js', array('jquery'), '1.0.0' );
     //google font
     wp_enqueue_style( 'font', 'https://fonts.googleapis.com/css?family=Lato' );
+    //slick styles
+    wp_enqueue_style( 'slick', get_stylesheet_directory_uri() . '/assets/css/slick.css' );
+    //slick Javascript
+    wp_enqueue_script( 'slick', get_stylesheet_directory_uri() . '/assets/js/slick.js', array('jquery'), '1.0.0' );
 }
 add_action( 'wp_enqueue_scripts', 'theme_scripts' );
 
