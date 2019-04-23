@@ -29,7 +29,7 @@
             ); ?>
         </nav>
         <div class="humburger-container">
-            <button type="button" class="hamburger">
+            <button type="button" class="hamburger navbar-toggle">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>

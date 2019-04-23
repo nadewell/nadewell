@@ -14,6 +14,7 @@
                         while(have_posts()): the_post(); 
                         get_template_part( 'template-parts/post/content' );
                         endwhile;
+                        echo paginate_links();
                     endif;
                     ?>
                     </main>
