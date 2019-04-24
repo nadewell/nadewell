@@ -353,7 +353,7 @@ article.post .screen-reader-text {
     padding-right: 1em;
     padding-left: 0em;
 }
-.site-footer .widget-area:first-child{
+.site-footer .widget-area:last-child{
     padding-right: 0em;
     padding-left: 1em;
 }
