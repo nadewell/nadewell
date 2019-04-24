@@ -126,6 +126,14 @@ ul li{
 ul li:last-child{
     margin-bottom: 0;
 }
+label{
+    margin-bottom: 20px;
+    padding: 0.36em;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    text-transform: uppercase;
+}
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -333,6 +341,7 @@ article.post .screen-reader-text {
     background: #333;
     padding: 3em 0 2em 0;
 }
+.site-footer label,
 .site-footer input {
     border-color: #fff;
     color: #fff;
