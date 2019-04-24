@@ -2,17 +2,14 @@
 
 <div class="site-content-contain">
     <div id="content" class="site-content">
+        <header class="page-header banner">
+            <h1 class="page-title">404 Not Found</h2>
+        </header>
         <div class="wrap">
             <div class="row">
                 <div id="primary" class="content-area">
                     <main id="main" class="site-main" role="main">
-                    <?php
-                    if( have_posts() ):
-                        while(have_posts()): the_post(); 
-                        get_template_part( 'template-parts/page/content', 'front' );
-                        endwhile;
-                    endif;
-                    ?>
+                    <?php get_template_part( 'template-parts/page/content', '404' ); ?>
                     </main>
                 </div>
             </div>

@@ -583,6 +583,14 @@ a.read-more {
 .author-links > .social-links.youtube{
     background: #F11;
 }
+/*************
+* 404 page
+*/
+.error404 .content-area article {
+    max-width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+}
 
 @media (max-width: 75em){
     .site-header {
