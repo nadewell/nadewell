@@ -350,6 +350,14 @@ article.post .screen-reader-text {
     float: left;
     width: 50%;
 }
+.site-footer .widget-area:first-child{
+    padding-right: 1em;
+    padding-left: 0em;
+}
+.site-footer .widget-area:first-child{
+    padding-right: 0em;
+    padding-left: 1em;
+}
 .site-footer .widget {
     margin: 0 0 2em;
 }
