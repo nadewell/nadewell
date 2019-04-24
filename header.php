@@ -11,7 +11,7 @@
 
 <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
-    <header id="masthead" class="site-header" role="headerss">
+    <header id="masthead" class="site-header">
         <div class="site-branding">
             <?php if( has_custom_logo() ): ?>
             <img src="<?php echo wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ) , 'full' )[0]; ?>" alt="<?php bloginfo( 'name' ); ?>">

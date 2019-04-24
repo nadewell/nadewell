@@ -21,8 +21,8 @@ $featured_image_src = $featured_image[0];
                         get_template_part( 'template-parts/post/content', 'single' );
                         endwhile;
                         the_post_navigation(array(
-                            'prev_text'                  => __( 'previous: %title' ),
-                            'next_text'                  => __( 'next: %title' ),
+                            'prev_text'                  => __( '<strong>previous</strong>: %title' ),
+                            'next_text'                  => __( '%title :<strong>next</strong>' ),
                         ));
                     endif;
                     ?>
@@ -33,12 +33,17 @@ $featured_image_src = $featured_image[0];
                 <div class="widget-area">
                 <div class="author-box">
                     <div class="author-avatar">
-                        <img src="<?php echo get_avatar( get_the_author_meta( 'ID' ) ); ?>" alt="<?php the_author(); ?>">
+                    <?php echo get_avatar( get_the_author_meta( 'ID' ) ); ?>
                     </div>
                     <div class="author-meta">
                         <h4 class="author-title"><?php the_author(); ?></h4>
-                        <p class="author-description"><?php the_author_description(); ?></p>
-                        <div class="author-links"></div>
+                        <p class="author-description"><?php echo get_the_author_meta('description'); ?></p>
+                        <div class="author-links">
+                            <a class="social-links email" href="mailto:<?php echo get_the_author_meta('user_email') ?>" target="_blank"><i class="far fa-envelope"></i></a>
+                            <a class="social-links facebook" href="<?php echo get_the_author_meta('facebook') ?>" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a class="social-links instagram" href="<?php echo get_the_author_meta('instagram') ?>" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a class="social-links youtube" href="<?php echo get_the_author_meta('youtube') ?>" target="_blank"><i class="fab fa-youtube"></i></a>
+                        </div>
                     </div>
                 </div>
                 <?php   dynamic_sidebar('sidebar'); ?>

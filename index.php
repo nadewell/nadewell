@@ -14,7 +14,11 @@
                         while(have_posts()): the_post(); 
                         get_template_part( 'template-parts/post/content' );
                         endwhile;
-                        echo paginate_links();
+                    ?>
+                    <div class="pagination-links">
+                    <?php echo paginate_links(); ?>
+                    </div>
+                    <?php 
                     endif;
                     ?>
                     </main>

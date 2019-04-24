@@ -253,6 +253,12 @@ article.post .screen-reader-text {
     padding: 1em 6.5em;
     background: #fff;
     box-shadow: 0px 0px 5px #ddd;
+    z-index: 999999;
+    transition: all 0.3s ease-out;
+}
+.site-header.header-fixed {
+    position: fixed;
+    top: 0;
 }
 .site-branding {
     display: table-cell;
@@ -486,9 +492,97 @@ a.read-more {
     text-transform: uppercase;
     border-bottom: 1px solid;
 }
+.pagination-links {
+    display: table;
+    min-height: 2em;
+    margin: 0em 0.5em 1em 0.5em;
+}
+.page-numbers,
+.page-numbers.current {
+    display: table-cell;
+    background: #fff;
+    color: #333;
+    min-width: 2em;
+    border-radius: 1em;
+    text-align: center;
+    vertical-align: middle;
+}
+.page-numbers.current {
+    background: #f33;
+    color: #fff;
+}
 /************
 *   Single 
 */
+.single article.post {
+    padding: 0em 0.5em 1em 0.5em;
+    border-bottom: 2px solid #f33;
+    margin-bottom: 1em;
+}
+.post-navigation .nav-links {
+    display: table;
+    width: 100%;
+}
+.nav-previous {
+    display: table-cell;
+    float: left;
+}
+.nav-next {
+    display: table-cell;
+    float: right;
+}
+.nav-previous > a > strong,
+.nav-next > a> strong{
+    text-transform: uppercase;
+}
+.author-box {
+    margin: 0 0 2em;
+    border-bottom: 1px solid #ddd;
+}
+.author-avatar {
+    margin-bottom: 1.5em;
+}
+.author-avatar > img.avatar {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.author-meta > .author-title {
+    text-align: center;
+    margin-bottom: 0.7em;
+}
+.author-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+.author-links > .social-links {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 2.5em;
+    font-size: 18px;
+    position: relative;
+}
+.author-links > .social-links > i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+}
+.author-links > .social-links.email{
+    background: #333;
+}
+.author-links > .social-links.facebook{
+    background: #03a;
+}
+.author-links > .social-links.instagram{
+    background: #f1a;
+}
+.author-links > .social-links.youtube{
+    background: #F11;
+}
 
 @media (max-width: 75em){
     .site-header {
