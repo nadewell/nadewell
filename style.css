@@ -526,16 +526,20 @@ a.read-more {
     margin-bottom: 1em;
 }
 .post-navigation .nav-links {
-    display: table;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 .nav-previous {
-    display: table-cell;
-    float: left;
+    max-width: 50%;
+    padding-right: 1em;
+    padding-left: 0em;
 }
 .nav-next {
-    display: table-cell;
-    float: right;
+    max-width: 50%;
+    padding-right: 0em;
+    padding-left: 1em;
 }
 .nav-previous > a > strong,
 .nav-next > a> strong{
@@ -697,6 +701,37 @@ a.read-more {
     .wrap {
         max-width: 100%;
     }
+    .nav-previous,
+    .nav-next {
+        max-width: 100%;
+        padding-right: 1em;
+        padding-left: 1em;
+        margin-bottom: 1em;
+    }
+    h1 {
+        font-size: 26px;
+        font-weight: 800;
+    }
+    h2{
+        font-size: 24px;
+        font-weight: 700;
+    }
+    h3{
+        font-size: 21px;
+        font-weight: 500;
+    }
+    h4{
+        font-size: 18px;
+        font-weight: 500;
+    }
+    h5{
+        font-size: 16px;
+        font-weight: 400;
+    }
+    h6{
+        font-size: 14px;
+        font-weight: 400;
+    }
     /***************************
     *Grid for medium size devices 
     */
@@ -758,6 +793,10 @@ a.read-more {
     }
     .site-footer .widget-area {
         width: 100%;
+    }
+    h1 {
+        font-size: 24px;
+        font-weight: 800;
     }
     /***************************
     *Grid for small size devices 
