@@ -1,6 +1,6 @@
 </div>
 <footer class="site-footer">
-    <div class="wrap">
+    <div class="container">
         <div class="row">
             <?php   if(is_active_sidebar('footer-1')): ?>
             <div class="widget-area">

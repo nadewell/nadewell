@@ -5,7 +5,7 @@
         <header class="page-header banner">
                 <h2 class="page-title"><?php wp_title('', true, ''); ?></h2>
             </header>
-        <div class="wrap">
+        <div class="container">
             <div class="row">
                 <div id="primary" class="content-area">
                     <main id="main" class="site-main" role="main">

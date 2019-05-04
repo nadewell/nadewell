@@ -5,7 +5,7 @@
         <header class="page-header banner">
             <h1 class="page-title">404 Not Found</h2>
         </header>
-        <div class="wrap">
+        <div class="container">
             <div class="row">
                 <div id="primary" class="content-area">
                     <main id="main" class="site-main" role="main">
